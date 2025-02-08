@@ -7,6 +7,8 @@ Upon fetching the initial list of recipes from the API, the app will then save i
 
 Finally, each recipe in the list is tappable, and navigates the user to a second screen to view a Youtube video if available.
 
+https://github.com/user-attachments/assets/0e68cd01-eb80-45e8-89f7-f12d25913c84
+
 ### Focus Areas
 SwiftUI makes creating Views pretty simple and clean, especially when using the MVVM architecture.  I wanted to make sure the Views were componentized appropriately, dependencies conformed to protocols for dependency injection unit testing, and all business logic is seperated from the View and placed in the view model.  Unit tests are for the `Api` and `RecipeListVM` objects, and there are some UI tests for the `RecipeListView`.  More details about my thoughts behind building this project are under the *Trade-offs and Decisions* section.
 
@@ -40,4 +42,8 @@ The weakest part of the project is likely the `lazyInit()` function in the `Reci
 Another area of improvement for this app could be how it uses the `AppDelegate` to initialize the app's dependencies.  Rather that storing the dependencies in the `AppDelegate` we could potentially instead use a "Dependency Injection Container" singleton to initialize and store all dependencies.  Then we could access each instance of any future dependencies directly from the container.  This was out of scope for this project so I left it out.
 
 ### Additional Information
-I very much appreciate this style of coding assessment instead of the "Leetcode" style approach.  Leetcode might be okay for backend, but in my opinion it's definitely not a good indicator for frontend technologies like iOS.  Thank you for taking this into consideration.  I had fun building this. 
+I very much appreciate this style of coding assessment instead of the "Leetcode" style approach.  Leetcode might be okay for backend, but in my opinion it's definitely not a good indicator for frontend technologies like iOS.  Thank you for taking this into consideration.  I had fun building this.
+
+### Screenshot that data is being fetched from the device using `SwiftData`
+![CachedRecipes](https://github.com/user-attachments/assets/e6c1c325-ba9f-407b-a897-0fbfd7592f87)
+
